@@ -15,16 +15,16 @@ namespace MiniAdventureDotNetWeb.Migrations
                     ActionCode = table.Column<string>(type: "text", nullable: false),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Segment1 = table.Column<string>(type: "text", nullable: false),
-                    Segment2 = table.Column<string>(type: "text", nullable: false),
-                    Segment3 = table.Column<string>(type: "text", nullable: false),
-                    Segment4 = table.Column<string>(type: "text", nullable: false),
-                    Segment5 = table.Column<string>(type: "text", nullable: false),
+                    Segment2 = table.Column<string>(type: "text", nullable: true),
+                    Segment3 = table.Column<string>(type: "text", nullable: true),
+                    Segment4 = table.Column<string>(type: "text", nullable: true),
+                    Segment5 = table.Column<string>(type: "text", nullable: true),
                     OptionA = table.Column<string>(type: "text", nullable: false),
-                    OptionB = table.Column<string>(type: "text", nullable: false),
-                    OptionC = table.Column<string>(type: "text", nullable: false),
+                    OptionB = table.Column<string>(type: "text", nullable: true),
+                    OptionC = table.Column<string>(type: "text", nullable: true),
                     ActionA = table.Column<string>(type: "text", nullable: false),
-                    ActionB = table.Column<string>(type: "text", nullable: false),
-                    ActionC = table.Column<string>(type: "text", nullable: false)
+                    ActionB = table.Column<string>(type: "text", nullable: true),
+                    ActionC = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
