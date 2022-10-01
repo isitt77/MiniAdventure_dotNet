@@ -1,21 +1,35 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using MiniAdventureDotNetWeb.Data;
 using MiniAdventureDotNetWeb.Models;
 
 namespace MiniAdventureDotNetWeb.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    private readonly ApplicationDbContext _db;
+
+    public HomeController(ApplicationDbContext db)
     {
-        _logger = logger;
+        _db = db;
     }
+
+
+    //private readonly ILogger<HomeController> _logger;
+
+    //public HomeController(ILogger<HomeController> logger)
+    //{
+    //    _logger = logger;
+    //}
+
+
 
     public IActionResult Index()
     {
-        return View();
+        var page1 = _db.Pages.Find("0");
+        Console.WriteLine("Page 1 retrieved: " + page1.Title);
+        return View(page1);
     }
 
     public IActionResult Privacy()
