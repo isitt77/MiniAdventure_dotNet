@@ -25,9 +25,9 @@ namespace MiniAdventureDotNetWeb.Controllers
         {
             Console.WriteLine("id = " + id);
             //var page1 = _db.Pages.Find(id);
-            var page1 = _db.Pages.Find(id);
-            Console.WriteLine("Page 1 retrieved: " + page1);
-            return View(page1);
+            var page = _db.Pages.Find(id);
+            Console.WriteLine("Page retrieved: " + page);
+            return View(page);
         }
     }
 }

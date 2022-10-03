@@ -5,9 +5,50 @@
     ViewData["Title"] = "Index";
 }
 @model Page
+@*<div class="text-center">
+        <h1 class="display-4">@Model.Title</h1>
+        <p>Segment 1</p>
+    </div>*@
 
+<!-- title column -->
+<div class="row text-center">
+    <div class="col-12">
+        <h3>@Model.Title</h3>
+        <h2>
+            <!-- <%= story.actionCode %> -->
+        </h2>
+    </div>
+</div>
 
-<div class="text-center">
-    <h1 class="display-4">@Model.Title</h1>
-    <p>Segment 1</p>
+<!-- text column-->
+<div class="row align-items-center justify-content-center">
+    <div class="col-sm-12 col-md-10 col-xl-7 mb-3">
+        <p>@Model.Segment1</p>
+        <p>@Model.Segment2</p>
+        <p>@Model.Segment3</p>
+        <p>@Model.Segment4</p>
+        <p>@Model.Segment5</p>
+    </div>
+</div>
+
+<!-- button group column -->
+<div class="row text-center justify-content-center">
+    <div class="col-sm-4 col-md-3 col-xl-2 form-group">
+        <a class="btn ripple" asp-controller="Page" asp-action="Index" asp-route-id="@Model.ActionA">@Model.OptionA</a>
+    </div>
+
+    @if (Model.OptionB != "")
+    {
+        <div class="col-sm-4 col-md-3 col-xl-2 form-group">
+            <a class="btn ripple" asp-controller="Page" asp-action="Index" asp-route-id="@Model.ActionB">@Model.OptionB</a>
+        </div>
+    }
+
+    @if (Model.OptionC != "")
+    {
+        <div class="col-sm-4 col-md-3 col-xl-2 form-group">
+            <a class="btn ripple" asp-controller="Page" asp-action="Index" asp-route-id="@Model.ActionC">@Model.OptionC</a>
+        </div>
+    }
+
 </div>
