@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MiniAdventureDotNetWeb.Data;
+using MiniAdventureDotNetWeb.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,10 +21,12 @@ namespace MiniAdventureDotNetWeb.Controllers
 
 
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
-            var page1 = _db.Pages.Find("0");
-            Console.WriteLine("Page 1 retrieved: " + page1.Title);
+            Console.WriteLine("id = " + id);
+            //var page1 = _db.Pages.Find(id);
+            var page1 = _db.Pages.Find(id);
+            Console.WriteLine("Page 1 retrieved: " + page1);
             return View(page1);
         }
     }
