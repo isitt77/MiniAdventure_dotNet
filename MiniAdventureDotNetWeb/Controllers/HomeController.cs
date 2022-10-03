@@ -8,12 +8,12 @@ namespace MiniAdventureDotNetWeb.Controllers;
 public class HomeController : Controller
 {
 
-    private readonly ApplicationDbContext _db;
+    //private readonly ApplicationDbContext _db;
 
-    public HomeController(ApplicationDbContext db)
-    {
-        _db = db;
-    }
+    //public HomeController(ApplicationDbContext db)
+    //{
+    //    _db = db;
+    //}
 
 
     //private readonly ILogger<HomeController> _logger;
@@ -27,9 +27,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var page1 = _db.Pages.Find("0");
-        Console.WriteLine("Page 1 retrieved: " + page1.Title);
-        return View(page1);
+        //var page1 = _db.Pages.Find("0");
+        //Console.WriteLine("Page 1 retrieved: " + page1.Title);
+        return View();
     }
 
     public IActionResult Privacy()
