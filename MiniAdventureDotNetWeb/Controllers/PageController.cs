@@ -24,7 +24,6 @@ namespace MiniAdventureDotNetWeb.Controllers
         public IActionResult Index(string id)
         {
             Console.WriteLine("id = " + id);
-            //var page1 = _db.Pages.Find(id);
             var page = _db.Pages.Find(id);
             Console.WriteLine("Page retrieved: " + page);
             return View(page);
