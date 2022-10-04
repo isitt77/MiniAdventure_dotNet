@@ -34,7 +34,14 @@
 <!-- button group column -->
 <div class="row text-center justify-content-center">
     <div class="col-sm-4 col-md-3 col-xl-2 form-group">
-        <a class="btn ripple" asp-controller="Page" asp-action="Index" asp-route-id="@Model.ActionA">@Model.OptionA</a>
+        @if (Model.ActionA != "")
+        {
+            <a class="btn ripple" asp-controller="Page" asp-action="Index" asp-route-id="@Model.ActionA">@Model.OptionA</a>
+        }
+        @if (Model.ActionA == "")
+        {
+            <a class="btn ripple" asp-controller="Home" asp-action="Index">@Model.OptionA</a>
+        }
     </div>
 
     @if (Model.OptionB != "")
