@@ -28,7 +28,7 @@ namespace MiniAdventureDotNetWeb.Controllers
 
             if (page != null)
             {
-                Console.WriteLine("Page retrieved: " + page);
+                Console.WriteLine("Page retrieved: " + page.ActionCode + ": " + page.Title);
                 return View(page);
             }
             return RedirectToAction("Error");
