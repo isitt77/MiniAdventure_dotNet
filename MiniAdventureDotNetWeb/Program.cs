@@ -27,12 +27,14 @@ app.Use(async (context, next) =>
     // not found error (404)
     if (context.Response.StatusCode == (int)HttpStatusCode.NotFound)
     {
+        Console.WriteLine(context.Response.StatusCode);
         context.Request.Path = "/Home/Error";
         await next();
     }
     // // unhandled error (500)
     if (context.Response.StatusCode == (int)HttpStatusCode.InternalServerError)
     {
+        Console.WriteLine(context.Response.StatusCode);
         context.Request.Path = "/Home/Error";
         await next();
     }
