@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Net;
+using Microsoft.EntityFrameworkCore;
 using MiniAdventureDotNetWeb.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,7 +24,14 @@ else
 app.Use(async (context, next) =>
 {
     await next();
-    if (context.Response.StatusCode == 404)
+    // not found error (404)
+    if (context.Response.StatusCode == (int)HttpStatusCode.NotFound)
+    {
+        context.Request.Path = "/Home/Error";
+        await next();
+    }
+    // // unhandled error (500)
+    if (context.Response.StatusCode == (int)HttpStatusCode.InternalServerError)
     {
         context.Request.Path = "/Home/Error";
         await next();
