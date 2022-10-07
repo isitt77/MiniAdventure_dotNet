@@ -20,7 +20,7 @@ namespace MiniAdventureDotNetWeb.Controllers
         }
 
 
-        // GET: /<controller>/
+        // GET: /Page/Index
         public IActionResult Index(string id)
         {
             Console.WriteLine("id = " + id);
@@ -34,7 +34,7 @@ namespace MiniAdventureDotNetWeb.Controllers
             return RedirectToAction("Error");
         }
 
-        // GET Error
+        // GET /Page/Error
         public IActionResult Error()
         {
             return View();
