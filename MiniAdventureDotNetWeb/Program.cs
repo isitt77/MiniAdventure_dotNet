@@ -26,9 +26,6 @@ else
 app.Use(async (context, next) =>
 {
     await next();
-    // CSP prevents cross scripting
-    //context.Response.Headers.Add("Content-Security-Policy", "default-src 'self' cdn.jsdelivr.net;");
-    //await next();
 
     // not found error (404)
     if (context.Response.StatusCode == (int)HttpStatusCode.NotFound)
@@ -48,6 +45,13 @@ app.Use(async (context, next) =>
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.Use(async (context, next) =>
+{
+    //CSP prevents cross scripting
+    context.Response.Headers.Add("Content-Security-Policy", "default-src 'self';");
+    await next();
+});
 
 app.UseRouting();
 
