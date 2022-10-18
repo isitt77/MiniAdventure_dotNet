@@ -49,7 +49,7 @@ app.UseStaticFiles();
 app.Use(async (context, next) =>
 {
     //CSP prevents cross scripting
-    context.Response.Headers.Add("Content-Security-Policy", "default-src 'self';");
+    context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; connect-src 'self' wss:;");
     await next();
 });
 
