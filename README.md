@@ -1,7 +1,7 @@
 # MiniAdventure_dotNet
-Choose your own adventure...ASP.NET version of my Node/Express app
+ASP.NET version of my Node/Express app
 
-This is choose your own adventure web application in the neo-noir genre. In this story, you are walking home from work at night when you see something shiny. The choices you make from there will take you on one of 15 paths.
+This is a choose your own adventure web application in the neo-noir genre. In this story, you are walking home from work at night when you see something shiny. The choices you make from there will take you on one of 15 paths.
 
 The overarching theme is how the small choices we make can have a profound effect on the lives of others.
 
