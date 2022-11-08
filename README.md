@@ -1,4 +1,7 @@
 # MiniAdventure_dotNet
+
+Update 11/08/2022 - In process of solving NuGet dependency update issue with database. Currently, database is not accessible. I will fix as soon as I can. Sorry for the inconvenience.
+
 ASP.NET version of my Node/Express app
 
 This is a choose your own adventure web application in the neo-noir genre. In this story, you are walking home from work at night when you see something shiny. The choices you make from there will take you on one of 15 paths.
