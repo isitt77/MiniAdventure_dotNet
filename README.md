@@ -1,6 +1,7 @@
 # MiniAdventure_dotNet
 
-Update 11/08/2022 - In process of solving NuGet dependency update issue with database. Currently, database is not accessible. I will fix as soon as I can. Sorry for the inconvenience.
+Update 11/08/2022 - In process of solving NuGet dependency update issue affecting the database. Currently, database is not accessible. I will fix as soon as I can. Sorry for the inconvenience.
+
 
 ASP.NET version of my Node/Express app
 
