@@ -7,4 +7,4 @@ The overarching theme is how the small choices we make can have a profound effec
 
 On the technical side of this app, the story is stored in PostgreSQL and displayed on the frontend using Razor syntax. Built with ASP.NET MVC.
 
-Hosted on Azure (link in the About section).
+Update: This site is no longer live.
